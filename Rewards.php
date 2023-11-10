@@ -4,13 +4,13 @@
  <title> Rewards
  </title>
  <meta charset="utf-8"> // meta always inside the <head> element
- <a href="login.html">Login</a>
- <a href="Homepage.html">Homepage</a>
- <a href="About_Us.html">About Us</a>
- <a href="Location.html">Location</a>
- <a href="Redeem.html">Redeem</a>
- <a href="Map.html">Rewards</a>
- <a href="Profile.html">Profile</a>
+ <a href="login.php">Login</a>
+ <a href="Homepage.php">Homepage</a>
+ <a href="About_Us.php">About Us</a>
+ <a href="Location.php">Location</a>
+ <a href="Redeem.php">Redeem</a>
+ <a href="Map.php">Rewards</a>
+ <a href="Profile.php">Profile</a>
 
  </head>
  <body>
