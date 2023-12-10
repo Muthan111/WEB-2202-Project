@@ -15,6 +15,16 @@
 
  </head>
  <body>
-    <P>Code goes here</P>  
+    <div>
+      <div>
+
+      </div>
+    </div>
+    <div>
+      <div>
+         <h4>Role</h4>
+         <p>Customer </p>
+      </div>
+    </div>  
  </body>   
 </html>

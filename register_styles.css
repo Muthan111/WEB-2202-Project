@@ -1,0 +1,46 @@
+body {
+    background-color: lightgray;
+    margin: 0;
+}
+.register {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 9px 0 black;
+    margin: 100px auto;
+}
+.register h1 {
+    text-align: center;
+    color: orangered;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid white;
+}
+.register form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.register form input[type = "submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: orangered;
+    border: 0;
+    cursor : pointer;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.2s;
+}
+ .login {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: blue;
+    border: 0;
+    cursor : pointer;
+    font-weight: bold;
+    color: green;
+    transition: background-color 0.2s;
+}
