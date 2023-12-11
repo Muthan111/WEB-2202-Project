@@ -7,13 +7,7 @@ include "session_time_logout.php"
  <title> Profile
  </title>
  <meta charset="utf-8"> 
- <a href="login.php">Login</a>
- <a href="Homepage.php">Homepage</a>
- <a href="About_Us.php">About Us</a>
- <a href="Location.php">Location</a>
- <a href="Reward.php">Rewards</a>
- <a href="Redeem.php">Redeem</a>
- <a href="Map.php">Rewards</a>
+ 
  <link rel = "stylesheet" type ="text/css" href = "profile.css">
  <link rel = "stylesheet" type ="text/css" href = "navbar.css">
  </head>
@@ -22,18 +16,18 @@ include "session_time_logout.php"
     <a class="logo" href="#"><img class="img1" src="./images/Screenshot 2023-12-11 153144.png" alt="Logo"></a>
     <ul>
       <li>
-        <a href="#">Home</a>
+        <a href="Homepage.php">Home</a>
         <ul class="dropdown">
-          <li><a href="#">About Us</a></li>
+          <li><a href="About_Us.php">About Us</a></li>
         </ul>
       </li>
       <li>
-        <a href="#">Location</a>
+        <a href="Location.php">Location</a>
         <ul class="dropdown">
-          <li><a href="#">Map</a></li>
+          <li><a href="Map.php">Map</a></li>
         </ul>
       </li>
-      <li><a href="#">Redeem</a></li>
+      <li><a href="Redeem.php">Redeem</a></li>
       <!-- <li><a href="#">Rewards</a></li>
       <li><a href="#">Points</a></li> -->
       <li class="profile">

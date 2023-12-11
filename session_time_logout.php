@@ -17,7 +17,7 @@ session_start();
         }
     $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
   }
-  else echo "Please <a href='user_login_backend.php'>Click Here</a> to log in.";
+  
 
   function destroy_session_and_data()
 {
