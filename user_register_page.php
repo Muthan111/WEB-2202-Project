@@ -39,6 +39,11 @@
     <div class = "register">
         <h1> Register</h1>
         <form action ='user_register_backend.php' method ='post'>
+            <?php
+            if (isset($_GET['error'])){
+              echo $_GET['error'];
+            } 
+            ?>
             <label>Full Name</label>
             <input type ="Name" name ="Name" placeholder = "Name" id = "Name" >
             <label> User Name</label>

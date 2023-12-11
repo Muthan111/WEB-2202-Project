@@ -11,16 +11,16 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     
 
     if (empty($userName)){
-        echo "Username is required";
+        header("Location: user_register_page.php?error=Username is required ");
         exit();
     } elseif (empty($password)){
-        echo "Password is required";
+        header("Location: user_register_page.php?error=Password is required ");
         exit();
     } elseif (empty($fullName)){
-        echo "Full Name is required";
+        header("Location: user_register_page.php?error=Full Name is required ");
         exit();
     } elseif (empty($email)){
-        echo "Email is required";
+        header("Location: user_register_page.php?error=Email is required ");
         exit();
     }
     if (preg_match($password_pattern, $password)) {

@@ -5,7 +5,7 @@
  <title> Homepage
  </title>
  
- <link rel = "stylesheet" type ="text/css" href = "login2.css">
+ <link rel = "stylesheet" type ="text/css" href = "login3.css">
  <link rel = "stylesheet" type ="text/css" href = "navbar.css">
  <meta charset="utf-8">
 </head>
@@ -39,22 +39,32 @@
       </li>
     </ul>
   </nav>
-<div class ="login">
-    <h1>Enter your username and password </h1>
-    <form action ="user_login_backend.php" method = "post">
-        
-        <?php if (isset($_GET['error'])) { ?>
-            <p class = "error"><?php echo $_GET['error']; ?></p>
-        <?php } ?>    
-        <label> User Name </label>
-        <input type = "text" name = "userName" placeholder = "user Name">
+ <div class = "flex_container">
+  <div class = "flexbox">
+    <h1>Join the movement</h1>
+    <p>Earn Reward points every
+      time you deposit a minimum of 1KG
+       of plastic waste with us.
+    </p>
+  </div> 
+  <div class ="login">
+      <h1>Enter your username and password </h1>
+      <form action ="user_login_backend.php" method = "post">
+          
+          <?php if (isset($_GET['error'])) { ?>
+              <p class = "error"><?php echo $_GET['error']; ?></p>
+          <?php } ?>    
+          <label> User Name </label>
+          <input type = "text" name = "userName" placeholder = "user Name">
 
-        <label> Password </label>
-        <input type ="password" name ="passWord" placeholder ="password">
-        
-        <button type = "submit"> Login </button>
-        <button type = "submit"> <a href = "user_register_page.php">Sign Up </button>
-    </form>
-</div>    
+          <label> Password </label>
+          <input type ="password" name ="passWord" placeholder ="password">
+          
+          <button type = "submit"> Login </button>
+          <button type = "submit"> <a href = "user_register_page.php">Sign Up </button>
+      </form>
+  </div>    
+</div> 
+ 
 </body>
 </html> 

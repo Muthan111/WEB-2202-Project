@@ -2,15 +2,39 @@
     font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
 }
+.flex_container{
+    display: flex;
+    
+    
+}
+.flexbox{
+    
+    min-width: 800px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+}
+
+.flexbox h1,
+.flexbox p {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 80%; /* Adjust text width */
+}
 body {
     background-color: lightgrey;
 }
 .login {
     text-align: center;
     background-color: white;
-    width: 50%;
+    width: 40%;
     margin: 100px auto;
     box-shadow: 0 0 9px 0 black;
+    
+    
 }
 .login h1 {
     text-align: center;

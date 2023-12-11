@@ -5,6 +5,7 @@
  </title>
  <meta charset="utf-8"> 
  <link rel = "stylesheet" type ="text/css" href = "navbar.css">
+ <link rel = "stylesheet" type ="text/css" href = "home_style.css">
 
  </head>
  <body>
@@ -37,5 +38,15 @@
       </li>
     </ul>
   </nav>
+  <div class = "text">
+    <h1>Upcycled 3D Printing Filament</h1>
+    
+  </div>
+  <div class = "text">
+    <h4>Learn More</h4>
+  </div>
+  <div class = "image">
+     <img src ="../WEB-2202-Project/images/download.png">
+  </div>
  </body>
 </html>
