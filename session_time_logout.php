@@ -5,7 +5,7 @@ session_start();
   {
     $name = htmlspecialchars($_SESSION['user_Name']);
        
-    if (isset($_SESSION['LAST_ACTIVITY']) && time() - $_SESSION['LAST_ACTIVITY'] > 60) {
+    if (isset($_SESSION['LAST_ACTIVITY']) && time() - $_SESSION['LAST_ACTIVITY'] > 1) {
         destroy_session_and_data();
     
         echo "session time out. <br>";
@@ -29,5 +29,6 @@ session_start();
    session_unset();
    setcookie(session_name(), '', time() - 2592000, '/');
    session_destroy();
+   header("Location: Profile.php");
 }
 ?>

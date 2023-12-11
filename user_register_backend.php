@@ -7,6 +7,8 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     $userName = validate($_POST['userName']);
     $email = validate($_POST['Email']);
     $password = validate($_POST['passWord']);
+    $password_pattern = '/^(?=.*[a-zA-Z])(?=.*\d).{8,}$/';
+    
 
     if (empty($userName)){
         echo "Username is required";
@@ -21,7 +23,12 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
         echo "Email is required";
         exit();
     }
-
+    if (preg_match($password_pattern, $password)) {
+        echo "Password is strong and meets the criteria.";
+    } else {
+        echo "Password does not meet the criteria for a strong password.";
+        exit();
+    }
     // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 

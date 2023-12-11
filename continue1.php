@@ -65,7 +65,7 @@
         </div>
         
         <div>
-            <a href = "user_login_page.php">
+            <a href = "Profile.php">
                 <button class = "button1" >Click here to return to the login page</button>
             </a>
         </div>

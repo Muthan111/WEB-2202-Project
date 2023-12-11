@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Changed font family for better readability */
+  }
+
+  /* Header styles - you can add more specific styles here if needed */
+  header {
+    /* Your header styles */
+  }
+
+  /* Navigation styles */
+  nav {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px; /* Adjusted padding for better appearance */
+  }
+
+  /* Logo styles */
+  .logo {
+    margin-right: auto; /* Pushes the logo to the left */
+  }
+
+  /* List styles */
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  nav li {
+    position: relative;
+    margin: 0 10px; /* Adjusted margins for better spacing */
+  }
+
+  nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  nav a:hover {
+    background: orangered;
+    color: white;
+  }
+
+  /* Dropdown styles */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    z-index: 999;
+  }
+
+  nav li:hover .dropdown {
+    display: block;
+  }
+
+  .dropdown li {
+    margin: 0;
+  }
+
+  /* Profile image styles */
+  .profile img {
+    display: block;
+    width: 40px; /* Adjusted image size */
+    height: 40px;
+    border-radius: 50%; /* Rounded profile image */
+    border: 2px solid black; /* Added default border around the image */
+    transition: border 0.3s ease; /* Added transition effect for smoothness */
+    padding: 6px; /* Added padding to create space between image and border */
+  }
+
+  /* Profile image border on hover */
+  .profile:hover img {
+    border: 2px solid lightgrey; /* Change border color and size on hover */
+  }
