@@ -12,3 +12,4 @@ if (!$conn){
 else{
     echo "connection Successfull";
 }
+?>

@@ -1,0 +1,27 @@
+.flexbox {
+    height: 600px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.flexcontainer{
+    
+    
+    width: 400px;
+    height: 400px;
+    margin-right: 100px;
+    padding-right: 20px;
+}
+ .img_class{
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: blue;
+}   
+p {
+    text-align: center;
+}
+body {
+    background-color: lightgray;
+}

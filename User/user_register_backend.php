@@ -10,17 +10,31 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     $password_pattern = '/^(?=.*[a-zA-Z])(?=.*\d).{8,}$/';
     
 
-    if (empty($userName)){
-        header("Location: user_register_page.php?error=Username is required ");
-        exit();
-    } elseif (empty($password)){
-        header("Location: user_register_page.php?error=Password is required ");
-        exit();
-    } elseif (empty($fullName)){
+    // if (empty($userName)){
+    //     header("Location: user_register_page.php?error=Username is required ");
+    //     exit();
+    // } elseif (empty($password)){
+    //     header("Location: user_register_page.php?error=Password is required ");
+    //     exit();
+    // } elseif (empty($fullName)){
+    //     header("Location: user_register_page.php?error=Full Name is required ");
+    //     exit();
+    // } elseif (empty($email)){
+    //     header("Location: user_register_page.php?error=Email is required ");
+    //     exit();
+    // }
+    if(empty($fullName)){
         header("Location: user_register_page.php?error=Full Name is required ");
         exit();
-    } elseif (empty($email)){
-        header("Location: user_register_page.php?error=Email is required ");
+    }elseif (empty($email)){
+         header("Location: user_register_page.php?error=Email is required ");
+         exit();
+    }     
+    elseif(empty($userName)){
+        header("Location: user_register_page.php?error=Username is required ");
+        exit();
+    }elseif(empty($password)){
+        header("Location: user_register_page.php?error=Password is required ");
         exit();
     }
     if (preg_match($password_pattern, $password)) {

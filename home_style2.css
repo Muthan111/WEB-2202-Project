@@ -1,0 +1,56 @@
+body {
+    background-color: lightgray;
+}
+.flexbox {
+    
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 70vh;
+}
+.flex-item {
+    
+    margin: 20px auto;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items vertically */
+    padding: 5px;
+    margin: 0 auto;
+    
+}
+.image{
+    
+    width: 50%;
+    margin-bottom: 30px;
+    
+}
+.text {
+    
+    margin-left: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 50%;
+    min-height: 100px;
+}
+
+h4{
+    margin-top: 150px;
+}
+.flexbox2{
+    display: flex;
+    margin: 0 100px 0 100px;
+    padding-right: 100px;
+}
+.flex1, .flex2, .flex3, .flex4{
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 2px solid orangered;
+    min-height: 100px;
+}
+.flex1 {
+    border-left: 2px solid orangered; 
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+
+
