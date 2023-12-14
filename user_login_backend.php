@@ -29,6 +29,7 @@ if (isset($_POST["userName"]) && isset($_POST["passWord"])) {
                 $_SESSION['name'] = $row['name'];
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['Email']= $row['Email'];
+                $_SESSION['Points'] = $row['Points'];
                 header("Location: Loggedin.html");
                 
             }

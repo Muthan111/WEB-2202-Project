@@ -27,7 +27,10 @@
       <li>
          <a href="Redeem.php">Redeem</a>
          <ul class="dropdown">
-          <li><a href="filament_selection.php">About Us</a></li>
+          <li><a href="filament_selection.php">Filaments</a></li>
+          <li><a href="filament_redeemer.php">PETG</a></li>
+          <li><a href="">PE</a></li>
+          <li><a href="filament_redeemer.php">PET</a></li>
         </ul>
       </li>
       <!-- <li><a href="#">Rewards</a></li>

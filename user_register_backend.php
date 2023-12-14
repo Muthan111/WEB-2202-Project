@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "database_connect.php";
+INCLUDE "database_connect.php";
 
 if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"])){
     $fullName = validate($_POST['Name']);
@@ -8,21 +8,6 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     $email = validate($_POST['Email']);
     $password = validate($_POST['passWord']);
     $password_pattern = '/^(?=.*[a-zA-Z])(?=.*\d).{8,}$/';
-    
-
-    // if (empty($userName)){
-    //     header("Location: user_register_page.php?error=Username is required ");
-    //     exit();
-    // } elseif (empty($password)){
-    //     header("Location: user_register_page.php?error=Password is required ");
-    //     exit();
-    // } elseif (empty($fullName)){
-    //     header("Location: user_register_page.php?error=Full Name is required ");
-    //     exit();
-    // } elseif (empty($email)){
-    //     header("Location: user_register_page.php?error=Email is required ");
-    //     exit();
-    // }
     if(empty($fullName)){
         header("Location: user_register_page.php?error=Full Name is required ");
         exit();

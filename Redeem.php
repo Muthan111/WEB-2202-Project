@@ -23,7 +23,16 @@
           <li><a href="Map.php">Map</a></li>
         </ul>
       </li>
-      <li><a href="Redeem.php">Redeem</a></li>
+      <li>
+         <a href="Redeem.php">Redeem</a>
+         <ul class="dropdown">
+          <li>
+            <a href="filament_selection.php">About Us</a>
+            <li><a href="filament_redeemer.php">About Us</a></li>
+         </li>
+          
+        </ul>
+      </li>
       <!-- <li><a href="#">Rewards</a></li>
       <li><a href="#">Points</a></li> -->
       <li class="profile">

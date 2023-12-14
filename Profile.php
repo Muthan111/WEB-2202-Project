@@ -1,5 +1,5 @@
 <?php
-include "session_time_logout.php"
+
 ?>
 <!DOCTYPE html>
  <html lang="en">
@@ -30,7 +30,10 @@ include "session_time_logout.php"
       <li>
          <a href="Redeem.php">Redeem</a>
          <ul class="dropdown">
-          <li><a href="filament_selection.php">About Us</a></li>
+          <li><a href="filament_selection.php">Filaments</a></li>
+          <li><a href="filament_redeemer.php">PETG</a></li>
+          <li><a href="">PE</a></li>
+          <li><a href="filament_redeemer.php">PET</a></li>
         </ul>
       </li>
       <!-- <li><a href="#">Rewards</a></li>
@@ -38,8 +41,8 @@ include "session_time_logout.php"
       <li class="profile">
         <a href="Profile.php"><img src="./images/profile.png" alt="Profile"></a>
         <ul class="dropdown" style ="left: -50%";>
-          <li><a href="./User/user_login_page.php">User login</a></li>
-          <li><a href="./User/user_register_page.php">User Registration</a></li>
+          <li><a href="user_login_page.php">User login</a></li>
+          <li><a href="user_register_page.php">User Registration</a></li>
           <li><a href="#">Admin login</a></li>
           <li><a href="#">Admin Registration</a></li>
         </ul>
@@ -53,6 +56,7 @@ include "session_time_logout.php"
          <H4>Name</H4>
          <p><?php 
         // continue.php
+        session_start();
         if (isset($_SESSION['user_Name']) && isset($_SESSION['name']))
         {
             $username = htmlspecialchars($_SESSION['user_Name']);
@@ -60,7 +64,7 @@ include "session_time_logout.php"
             $name = htmlspecialchars($_SESSION['name']);
         }  
         else echo "Please <a href='user_login_page.php'>Click Here</a> to log in.";
- ?></p>
+         ?></p>
       </div>
     
       <div class ="right_side">
