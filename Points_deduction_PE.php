@@ -118,13 +118,13 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
     </div>  
 
     <div>
-        <a href="Points_deduction_PETG.php">
+        <a href="Points_deduction_PE.php">
             <button class="button1">Click here to redeem again</button>
         </a>
     </div>
 
     <div>
-        <a href="filament_redeemer.php">
+        <a href="filament_redeemer_PE.php">
             <button class="button2">Click here to choose another amount</button>
         </a>
     </div>

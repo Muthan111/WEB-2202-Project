@@ -52,7 +52,7 @@
         
         <div class = "right">
             <p>GreenPrintCycle</p>
-            <h1 >PETG  FILAMENT</h1>
+            <h1 >PET  FILAMENT</h1>
             <h2>Description</h2>
             <p><br></p>
             <p style = "padding-bottom: 15px;"> PETG Filament is one of the most popular 
@@ -74,7 +74,7 @@
             <option value="XL">XL</option>
             </select>
             <p><br></p>
-            <form action = "Points_deduction_PETG.php" method = "post">
+            <form action = "Points_deduction_PET.php" method = "post">
               <label>Enter amount</label>
               <input type = "number" min="1" name= "quantity">
               <button>Redeem </button>

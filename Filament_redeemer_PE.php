@@ -28,8 +28,8 @@
          <ul class="dropdown">
           <li><a href="filament_selection.php">Filaments</a></li>
           <li><a href="filament_redeemer.php">PETG</a></li>
-          <li><a href="">PE</a></li>
-          <li><a href="filament_redeemer.php">PET</a></li>
+          <li><a href="filament_redeemer_PE.php">PE</a></li>
+          <li><a href="filament_redeemer_PET.php">PET</a></li>
         </ul>
       </li>
       <!-- <li><a href="#">Rewards</a></li>
@@ -74,7 +74,7 @@
             <option value="XL">XL</option>
             </select>
             <p><br></p>
-            <form action = "Points_deduction_PETG.php" method = "post">
+            <form action = "Points_deduction_PE.php" method = "post">
               <label>Enter amount</label>
               <input type = "number" min="1" name= "quantity">
               <button>Redeem </button>

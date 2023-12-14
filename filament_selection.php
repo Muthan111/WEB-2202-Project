@@ -25,8 +25,10 @@
       <li>
          <a href="Redeem.php">Redeem</a>
          <ul class="dropdown">
-          <li><a href="filament_selection.php">About Us</a></li>
-          <li><a href="filament_redeemer.php">About Us</a></li>
+          <li><a href="filament_selection.php">Filaments</a></li>
+          <li><a href="filament_redeemer.php">PETG</a></li>
+          <li><a href="filament_redeemer_PE.php">PE</a></li>
+          <li><a href="filament_redeemer_PET.php">PET</a></li>
         </ul>
       </li>
       <!-- <li><a href="#">Rewards</a></li>
@@ -34,8 +36,8 @@
       <li class="profile">
         <a href="Profile.php"><img src="./images/profile.png" alt="Profile"></a>
         <ul class="dropdown" style ="left: -50%";>
-          <li><a href="./User/user_login_page.php">User login</a></li>
-          <li><a href="./User/user_register_page.php">User Registration</a></li>
+          <li><a href="user_login_page.php">User login</a></li>
+          <li><a href="user_register_page.php">User Registration</a></li>
           <li><a href="#">Admin login</a></li>
           <li><a href="#">Admin Registration</a></li>
         </ul>

@@ -8,6 +8,13 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     $email = validate($_POST['Email']);
     $password = validate($_POST['passWord']);
     $password_pattern = '/^(?=.*[a-zA-Z])(?=.*\d).{8,}$/';
+    if (!preg_match($password_pattern, $password)) {
+        header("Location: user_register_page.php?error=Password is weak ");
+        exit();
+    } else {
+        header("Location: user_register_page.php?error=Password is Strong");
+    }
+    
     if(empty($fullName)){
         header("Location: user_register_page.php?error=Full Name is required ");
         exit();
@@ -22,39 +29,44 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
         header("Location: user_register_page.php?error=Password is required ");
         exit();
     }
-    if (preg_match($password_pattern, $password)) {
-        echo "Password is strong and meets the criteria.";
-    } else {
-        echo "Password does not meet the criteria for a strong password.";
-        exit();
-    }
+
+    
+
     // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Prepare the SQL statement using placeholders to prevent SQL injection
-    $sql = "INSERT INTO Data (Name, Email, user_Name, password) VALUES (?, ?, ?, ?)";
     
-    // Create a prepared statement
-    $stmt = mysqli_prepare($conn, $sql);
+    $sql = "INSERT INTO Data (Name, Email, user_Name, password) VALUES ('$fullName', '$email', '$userName', '$password')";
+    $result = mysqli_query($conn,$sql);
 
-    if ($stmt) {
-        // Bind parameters to the prepared statement as strings
-        mysqli_stmt_bind_param($stmt, "ssss", $fullName, $email,$userName ,$password );
-        
-        // Execute the prepared statement
-        $result = mysqli_stmt_execute($stmt);
-
-        if(!$result){
-            echo "Insertion failure: " . mysqli_error($conn);
-        } else {
-            echo "<script>alert('You have succesfully registered');</script>";
-        }
-        
-        // Close the statement
-        mysqli_stmt_close($stmt);
-    } else {
-        echo "Database error: " . mysqli_error($conn);
+    if (!$result){
+        echo "Insertion failure" . mysqli_error($conn);
+    }else {
+             echo "<script>alert('You have succesfully registered');</script>";
+             mysqli_close($conn);
     }
+    
+    
+    // $stmt = mysqli_prepare($conn, $sql);
+
+    // if ($stmt) {
+        
+    //     mysqli_stmt_bind_param($stmt, "ssss", $fullName, $email,$userName ,$password );
+        
+        
+    //     $result = mysqli_stmt_execute($stmt);
+
+    //     if(!$result){
+    //         echo "Insertion failure: " . mysqli_error($conn);
+    //     } else {
+    //         echo "<script>alert('You have succesfully registered');</script>";
+    //     }
+        
+        
+    //     mysqli_stmt_close($stmt);
+    // } else {
+    //     echo "Database error: " . mysqli_error($conn);
+    // }
 }
 
 function validate($data){

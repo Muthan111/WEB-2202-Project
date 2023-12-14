@@ -1,15 +1,8 @@
 <?php
 session_start(); // Start the session at the beginning of the script
-
 include "database_connect.php";
 
 if (isset($_POST["userName"]) && isset($_POST["passWord"])) {
-    function validate($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
     $userName = validate($_POST['userName']);
     $password = validate($_POST['passWord']);
     
@@ -19,6 +12,8 @@ if (isset($_POST["userName"]) && isset($_POST["passWord"])) {
     } elseif (empty($password)) {
         header("Location: user_login_page.php?error=Password is required");
         exit();
+
+        
     } else {
         $sql = "SELECT * FROM Data WHERE user_Name ='$userName' AND password = '$password' " ;
         $result = mysqli_query($conn,$sql);
@@ -43,6 +38,11 @@ if (isset($_POST["userName"]) && isset($_POST["passWord"])) {
     header("Location: user_login_page.php");
     exit();
 }
-
+function validate($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
 ?>
