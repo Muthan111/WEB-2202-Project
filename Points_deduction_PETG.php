@@ -53,7 +53,7 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
 <head>
     <!-- Meta tags, title, links to CSS -->
     <!-- ... -->
-
+    <title>Points deduction for PETG</title>
     <style>
         body{
             background-color: lightgray;

@@ -60,7 +60,7 @@
                 <p class = "error"><?php echo $_GET['error']; ?></p>
             <?php } ?>
             <label>Full Name</label>
-            <input type ="Name" name ="Name" placeholder = "Name" id = "Name" >
+            <input type ="Name" name ="Name" placeholder = "Name" id = "Name"  >
             <label>Email</label>
             <input type ="email" name ="Email" placeholder = "Email" id = "Email" >
             <label> User Name</label>

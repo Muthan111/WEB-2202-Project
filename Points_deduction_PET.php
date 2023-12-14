@@ -2,7 +2,6 @@
 include "database_connect.php";
 session_start();
 $error = "";
-
 if(isset($_POST['quantity'])){
     $amount = validate($_POST['quantity']);
 
@@ -33,7 +32,6 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
 
         $sql2 = "INSERT INTO redeemed_items (Customer, Filament, Points) VALUES ('$name','$material',$Points_Redeemed)";
         $table_result = mysqli_query($conn, $sql2);
-
         if ($table_result) {
             // Redemption success
             echo "Redemption successful for $material by $name";
@@ -53,9 +51,8 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags, title, links to CSS -->
-    <!-- ... -->
-    <title>Points deduction for PE</title>
+    
+    <title>Points deduction for PET</title>
     <style>
         body{
             background-color: lightgray;
@@ -120,13 +117,13 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
     </div>  
 
     <div>
-        <a href="Points_deduction_PE.php">
+        <a href="Points_deduction_PET.php">
             <button class="button1">Click here to redeem again</button>
         </a>
     </div>
 
     <div>
-        <a href="filament_redeemer_PE.php">
+        <a href="filament_redeemer_PET.php">
             <button class="button2">Click here to choose another amount</button>
         </a>
     </div>

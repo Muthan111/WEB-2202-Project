@@ -8,13 +8,25 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     $email = validate($_POST['Email']);
     $password = validate($_POST['passWord']);
     $password_pattern = '/^(?=.*[a-zA-Z])(?=.*\d).{8,}$/';
+    $Full_Name_pattern ='/^[a-zA-ZÀ-ÿ\'\- ]+$/u';
+
+    $checkEmailQuery = "SELECT * FROM Data WHERE Email = '$email'";
+    $checkResult = mysqli_query($conn, $checkEmailQuery);
+
+    if (mysqli_num_rows($checkResult) > 0) {
+        // Email already exists, redirect with an error message
+        header("Location: user_register_page.php?error=Email already exists");
+        exit();
+    }
+
+    if (!preg_match($Full_Name_pattern, $fullName)) {
+        header("Location: user_register_page.php?error=Name cannot contain numbers ");
+        exit();
+    }
     if (!preg_match($password_pattern, $password)) {
         header("Location: user_register_page.php?error=Password is weak ");
         exit();
-    } else {
-        header("Location: user_register_page.php?error=Password is Strong");
     }
-    
     if(empty($fullName)){
         header("Location: user_register_page.php?error=Full Name is required ");
         exit();
@@ -36,13 +48,13 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     
-    $sql = "INSERT INTO Data (Name, Email, user_Name, password) VALUES ('$fullName', '$email', '$userName', '$password')";
+    $sql = "INSERT INTO Data (Name, Email, user_Name, password) VALUES ('$fullName', '$email', '$userName', '$hashedPassword')";
     $result = mysqli_query($conn,$sql);
 
     if (!$result){
         echo "Insertion failure" . mysqli_error($conn);
     }else {
-             echo "<script>alert('You have succesfully registered');</script>";
+             header("Location: registered.html");
              mysqli_close($conn);
     }
     
