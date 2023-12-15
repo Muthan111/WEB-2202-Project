@@ -66,8 +66,10 @@
             <input type = "text" name=" userName" placeholder= "Username" id="userName" >
             <label>Password</label>
             <input type ="password" name ="passWord" placeholder = "passWord" id = "passWord" >
-            <input type = "submit" value="Register">
+            <label for="isAdmin">Register as Admin</label>
             <input type="checkbox" name="isAdmin" id="isAdmin">
+            <input type = "submit" value="Register">
+            
         </form>
         <a href = "user_login_page.php">
       <button class = "outer_button" type = "submit"> Login </button>
