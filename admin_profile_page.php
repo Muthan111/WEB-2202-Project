@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filament Selection</title>
-    <link rel = "stylesheet" type ="text/css" href = "navbar.css">
-    <link rel = "stylesheet" type ="text/css" href = "filament_Sele.css">
+    <title>Admin Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="profile.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
 </head>
+<body>
 <nav>
     <a class="logo" href="#"><img class="img1" src="./images/Screenshot 2023-12-11 153144.png" alt="Logo"></a>
     <ul>
@@ -42,22 +42,23 @@
       </li>
     </ul>
   </nav>
-<body>
-    <div class = "flexbox">
-        <div class = "flexcontainer flexitem1">
-            <img class = "img_class"  src = "./images/PE-filament.jpg">
-            <p>PE FILAMENT</p>
-        </div>
-        
-        <div class = "flexcontainer flexitem2">
-            <img class = "img_class" src = "./images/PET-filament.jpeg">
-            <p>PET FILAMENT</p>
-        </div>
 
-        <div class = "flexcontainer flexitem3" >
-            <img class = "img_class" src = "./images/PETG-filament.jpeg">
-            <p>PETG Filament</p>
-        </div>        
+    <div class="flex_container">
+        <div class="flexbox">
+            <!-- Admin information or other content -->
+        </div>
+        <div class="profile">
+            <h1>Admin Profile</h1>
+            <form action="admin_update_points.php" method="post">
+                <label for="userID">User ID:</label>
+                <input type="text" name="userID" id="userID" required>
+                
+                <label for="points">New Points:</label>
+                <input type="text" name="points" id="points" required>
+
+                <input type="submit" value="Update Points">
+            </form>
+        </div>
     </div>
 </body>
 </html>

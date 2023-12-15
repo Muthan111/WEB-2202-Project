@@ -67,9 +67,7 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
     <ul>
       <li>
         <a href="Homepage.php">Home</a>
-        <ul class="dropdown">
-          <li><a href="About_Us.php">About Us</a></li>
-        </ul>
+        
       </li>
       <li>
         <a href="Location.php">Location</a>
@@ -82,8 +80,8 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
          <ul class="dropdown">
           <li><a href="filament_selection.php">Filaments</a></li>
           <li><a href="filament_redeemer.php">PETG</a></li>
-          <li><a href="filament_redeemer.php_PE">PE</a></li>
-          <li><a href="filament_redeemer.php_PET">PET</a></li>
+          <li><a href="filament_redeemer_PE.php">PE</a></li>
+          <li><a href="filament_redeemer_PET.php">PET</a></li>
         </ul>
       </li>
       <!-- <li><a href="#">Rewards</a></li>
@@ -93,8 +91,9 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
         <ul class="dropdown" style ="left: -50%";>
           <li><a href="user_login_page.php">User login</a></li>
           <li><a href="user_register_page.php">User Registration</a></li>
-          <li><a href="#">Admin login</a></li>
-          <li><a href="#">Admin Registration</a></li>
+          <li><a href="admin_login_page.php">Admin login</a></li>
+          <li><a href="admin_login_backend.php">Admin Registration</a></li>
+          <li><a href="admin_profile_page.php">Admin Profile page</a></li>
         </ul>
       </li>
     </ul>

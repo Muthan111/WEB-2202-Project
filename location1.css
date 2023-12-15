@@ -1,0 +1,57 @@
+.content {
+    width: 70%;
+    min-width: 720px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  
+  .content h1 {
+    color: orangered;
+  }
+  
+  .discussion-container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 180px;
+    grid-auto-columns: 100%;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .discussion-item {
+    display: flex;
+    background-color: #eee;
+    padding: 25px;
+    align-items: center;
+  }
+  
+  .discussion-item img {
+    float: left;
+    height: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .discussion-item .discussion-info {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .discussion-item h2 {
+    font-family: OpenSans-Semibold, sans-serif;
+    font-size: 28px;
+    color: orangered;
+    margin: 0;
+  }
+  
+  .discussion-item p {
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    margin: 0;
+  }
+  body{
+    background-color: lightgray;
+  }

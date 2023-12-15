@@ -48,15 +48,28 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     
-    $sql = "INSERT INTO Data (Name, Email, user_Name, password) VALUES ('$fullName', '$email', '$userName', '$hashedPassword')";
+    $sql = "INSERT INTO Data (UserID,Name, Email, user_Name, password) VALUES (NULL,'$fullName', '$email', '$userName', '$password')";
     $result = mysqli_query($conn,$sql);
+    $userID = mysqli_insert_id($conn);
 
-    if (!$result){
-        echo "Insertion failure" . mysqli_error($conn);
-    }else {
-             header("Location: registered.html");
-             mysqli_close($conn);
+    $SQL2 = "INSERT INTO AdminUsers (UserID, AdminID) VALUES ($userID, NULL)";
+    $result2 = mysqli_query($conn,$SQL2);
+
+    // Check if both insertions were successful
+    if ($result2) {
+        // Redirect to the profile page after successful registration
+        header("Location: Profile.php");
+        exit();
+    } else {
+        echo "Insertion failure: " . mysqli_error($conn);
     }
+
+    // if (!$result){
+    //     echo "Insertion failure" . mysqli_error($conn);
+    // }else {
+    //          header("Location: registered.html");
+    //          mysqli_close($conn);
+    // }
     
     
     // $stmt = mysqli_prepare($conn, $sql);

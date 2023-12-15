@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filament Selection</title>
-    <link rel = "stylesheet" type ="text/css" href = "navbar.css">
-    <link rel = "stylesheet" type ="text/css" href = "filament_Sele.css">
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login5.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
 </head>
+<body>
 <nav>
     <a class="logo" href="#"><img class="img1" src="./images/Screenshot 2023-12-11 153144.png" alt="Logo"></a>
     <ul>
@@ -42,22 +42,31 @@
       </li>
     </ul>
   </nav>
-<body>
-    <div class = "flexbox">
-        <div class = "flexcontainer flexitem1">
-            <img class = "img_class"  src = "./images/PE-filament.jpg">
-            <p>PE FILAMENT</p>
-        </div>
-        
-        <div class = "flexcontainer flexitem2">
-            <img class = "img_class" src = "./images/PET-filament.jpeg">
-            <p>PET FILAMENT</p>
-        </div>
-
-        <div class = "flexcontainer flexitem3" >
-            <img class = "img_class" src = "./images/PETG-filament.jpeg">
-            <p>PETG Filament</p>
-        </div>        
+<div class="flex_container">
+    <div class="flexbox">
+        <h1>Join the movement</h1>
+        <p>Earn Reward points every time you deposit a minimum of 1KG of plastic waste with us.</p>
     </div>
+    <div class="login">
+        <h1>Enter your admin username and password</h1>
+        <form action="admin_login_backend.php" method="post">
+
+        <?php if (isset($_GET['error'])){ ?>
+                <p class = "error"><?php echo $_GET['error']; ?></p>
+            <?php } ?>
+            <label> Admin Username </label>
+            <input type="text" name="adminUserName" placeholder="Admin Username">
+
+            <label> Password </label>
+            <input type="password" name="adminPassWord" placeholder="Password">
+
+            <button type="submit"> Login </button>
+        </form>
+        <a href="admin_register_page.php">
+            <button class="outer_button" type="submit"> Sign Up </button>
+        </a>
+
+    </div>
+</div>
 </body>
 </html>
