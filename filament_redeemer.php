@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filament Selector for PETG</title>
-    <link rel = "stylesheet" type ="text/css" href = "Filament1.css">
-    <link rel = "stylesheet" type ="text/css" href = "navbar.css">
+    <link rel="stylesheet" type="text/css" href="Filament1.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
 </head>
 <body>
 <nav>
@@ -43,44 +43,53 @@
       </li>
     </ul>
   </nav>
-    <div class = "Wrapper">
-        <div class  = "left">
-            <img style = "width: 500px; height: 450px;" src = "./images/PETG-filament.jpeg">
+
+    <div class="Wrapper">
+        <div class="left">
+            <img style="width: 500px; height: 450px;" src="./images/PETG-filament.jpeg">
         </div>
-        
-        <div class = "right">
+
+        <div class="right">
             <p>GreenPrintCycle</p>
-            <h1 >PETG  FILAMENT</h1>
+            <h1>PETG FILAMENT</h1>
             <h2>Description</h2>
-            <p><br></p>
-            <p style = "padding-bottom: 15px;"> PETG Filament is one of the most popular 
-            filaments to print with, but also the most complicated to process, hence its price <br></p>
-            <br>
+            <h3>Redemption Price: 1000 points per Kg</h3>
+
             <label for="colorPicker">Choose color</label><br>
             <input type="color" list="presets">
             <datalist id="presets">
-            <option value="#cccccc">Grey</option>
-            <option value="#ffffff">White</option>
-            <option value="#6699cc">Blue</option>
+                <!-- Your color options here -->
             </datalist>
-            <label for="length">Choose length size:</label>
-            <select id="length" name="length" size="2">
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
+
+            <label for="weight">Choose weight (kg):</label>
+            <select id="weight" name="weight">
+                <?php
+                // Generate options for weights from 1 kg to 5 kg
+                for ($i = 1; $i <= 5; $i++) {
+                    echo "<option value=\"$i\">$i Kg</option>";
+                }
+                ?>
             </select>
+
             <p><br></p>
-            <form action = "Points_deduction_PETG.php" method = "post">
-              <label>Enter amount</label>
-              <input type = "number" min="1" name= "quantity">
-              <button>Redeem </button>
-            </form>     
-            <p><?php
+
+            <?php
             session_start();
+
+            // Check if the user is logged in
+            if (isset($_SESSION['user_Name'])) {
+                // Display the redemption form if the user is logged in
+                echo '<form action="Points_deduction_PETG.php" method="post">';
+                echo '<label>Enter amount</label>';
+                echo '<input type="number" min="1" name="quantity">';
+                echo '<button>Redeem</button>';
+                echo '</form>';
+            } else {
+                // Display a message if the user is not logged in
+                echo '<p>Please <a href="user_login_page.php">log in</a> to redeem filaments.</p>';
+            }
             ?>
-        </div>    
-    </div>   
+        </div>
+    </div>
 </body>
 </html>
