@@ -37,7 +37,7 @@
           <li><a href="user_login_page.php">User login</a></li>
           <li><a href="user_register_page.php">User Registration</a></li>
           <li><a href="admin_login_page.php">Admin login</a></li>
-          <li><a href="admin_login_backend.php">Admin Registration</a></li>
+          <li><a href="user_register_page.php">Admin Registration</a></li>
           <li><a href="admin_profile_page.php">Admin Profile page</a></li>
         </ul>
       </li>
@@ -67,6 +67,7 @@
             <label>Password</label>
             <input type ="password" name ="passWord" placeholder = "passWord" id = "passWord" >
             <input type = "submit" value="Register">
+            <input type="checkbox" name="isAdmin" id="isAdmin">
         </form>
         <a href = "user_login_page.php">
       <button class = "outer_button" type = "submit"> Login </button>

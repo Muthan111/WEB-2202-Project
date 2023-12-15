@@ -92,7 +92,7 @@ if (isset($_SESSION['user_Name']) && isset($_SESSION['name'])) {
           <li><a href="user_login_page.php">User login</a></li>
           <li><a href="user_register_page.php">User Registration</a></li>
           <li><a href="admin_login_page.php">Admin login</a></li>
-          <li><a href="admin_login_backend.php">Admin Registration</a></li>
+          <li><a href="user_register_page.php">Admin Registration</a></li>
           <li><a href="admin_profile_page.php">Admin Profile page</a></li>
         </ul>
       </li>
