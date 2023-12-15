@@ -58,7 +58,7 @@ if(isset($_POST["Name"], $_POST["userName"], $_POST["passWord"], $_POST["Email"]
     // Check if both insertions were successful
     if ($result2) {
         // Redirect to the profile page after successful registration
-        header("Location: Profile.php");
+        header("Location: registered.php");
         exit();
     } else {
         echo "Insertion failure: " . mysqli_error($conn);
